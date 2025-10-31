@@ -102,71 +102,89 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">A selection of projects showcasing my design process and problem-solving approach</p>
+                <p class="section-subtitle">See What I've Been Working On</p>
+            </div>
+
+            <!-- Project Filter -->
+            <div class="project-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="UX Research">UX Research</button>
+                <button class="filter-btn" data-filter="UX Design">UX Design</button>
+                <button class="filter-btn" data-filter="Figma">Figma</button>
+                <button class="filter-btn" data-filter="Prototyping">Prototyping</button>
+                <button class="filter-btn" data-filter="Front-End Development">Front-End Development</button>
+                <button class="filter-btn" data-filter="Information Architecture">Information Architecture</button>
+                <button class="filter-btn" data-filter="Qualitative Analysis">Qualitative Analysis</button>
             </div>
 
             <!-- Project Card 1 -->
-            <article class="project-card featured">
-                <div class="project-image">
+            <article class="project-card featured" data-tags="UX Research,UX Design,Figma,Leadership,Data Synthesis,Prototyping">
+                <a href="project1.html" class="project-image">
                     <img src="images/project1-thumbnail.jpg" alt="Project 1 Preview">
                     <div class="project-overlay">
-                        <span class="view-case-study">View Case Study →</span>
+                        <span class="view-case-study">View Project→</span>
                     </div>
-                </div>
+                </a>
                 <div class="project-content">
                     <div class="project-tags">
                         <span class="tag">UX Research</span>
-                        <span class="tag">UI Design</span>
-                        <span class="tag">Mobile</span>
+                        <span class="tag">UX Design</span>
+                        <span class="tag">Figma</span>
+                        <span class="tag">Leadership</span>
+                        <span class="tag">Data Synthesis</span>
+                        <span class="tag">Prototyping</span>
+                        
                     </div>
-                    <h3 class="project-title">Project Title 1</h3>
-                    <p class="project-description">
-                        Brief description of the project, the problem you solved, and your role. 
-                        Focus on impact and outcomes.
-                    </p>
-                    <a href="project1.html" class="project-link">View Case Study →</a>
+                    <h3 class="project-title">EventGenie</h3>
+                    <p class="project-description">Led a team in designing EventGenie, a web application to simplify hosts' catering experience through effective management of attendee's dietary restricitons. This project focused on user researhc, journey mapping, and an iterative design process that resoluted in usability testing of a medium fidelity prototype.</p>
+                    <a href="project1.html" class="project-link">View Project</a>
                 </div>
             </article>
 
             <!-- Project Card 2 -->
-            <article class="project-card">
-                <div class="project-image">
-                    <img src="images/project2-thumbnail.jpg" alt="Project 2 Preview">
+            <article class="project-card" data-tags="Information Architecture,Front-End Development,Prototyping,Figma,GitHub,HTML/CSS">
+                <a href="project2.html" class="project-image">
+                    <img src="images/project2-thumbnail.jpg" alt="Starter's Grid Preview">
                     <div class="project-overlay">
-                        <span class="view-case-study">View Case Study →</span>
+                        <span class="view-case-study">View Project →</span>
                     </div>
-                </div>
+                </a>
                 <div class="project-content">
                     <div class="project-tags">
-                        <span class="tag">Product Design</span>
-                        <span class="tag">Web Design</span>
+                        <span class="tag">Information Architecture</span>
+                        <span class="tag">Front-End Development</span>
+                        <span class="tag">Prototyping</span>
+                        <span class="tag">Figma</span>
+                        <span class="tag">GitHub</span>
+                        <span class="tag">HTML/CSS</span>
                     </div>
-                    <h3 class="project-title">Project Title 2</h3>
-                    <p class="project-description">
-                        Brief description of the project, highlighting your design thinking and methodology.
-                    </p>
-                    <a href="project2.html" class="project-link">View Case Study →</a>
+                    <h3 class="project-title">Starter's Grid</h3>
+                    <p class="project-description">Designed and developed a fully responsive eduactional website that introduces beginners to Formula 1 and Formula E. The project utilizes Information Architeucte and mobile-first development to organize complex content, resulting in a functional, code-based live product.</p>
+                    <a href="project2.html" class="project-link">View Project →</a>
                 </div>
             </article>
 
             <!-- Project Card 3 -->
-            <article class="project-card">
-                <div class="project-image">
+            <article class="project-card" data-tags="UX Research,Qualitative Analysis,Thematic Analysis,Affinity Mapping,Empathy Map">
+                <a href="project3.html" class="project-image">
                     <img src="images/project3-thumbnail.jpg" alt="Project 3 Preview">
                     <div class="project-overlay">
-                        <span class="view-case-study">View Case Study →</span>
+                        <span class="view-case-study">View Project →</span>
                     </div>
-                </div>
+                </a>
                 <div class="project-content">
                     <div class="project-tags">
-                        <span class="tag">UX Writing</span>
-                        <span class="tag">Information Architecture</span>
+                        <span class="tag">UX Research</span>
+                        <span class="tag">Qualitative Analysis</span>
+                        <span class="tag">Thematic Analysis</span>
+                        <span class="tag">Affinity Mapping</span>
+                        <span class="tag">Empathy Map</span>
+                        <span class="tag">Empathy Map</span>
+
                     </div>
-                    <h3 class="project-title">Project Title 3</h3>
-                    <p class="project-description">
-                        Brief description emphasizing user research and content strategy.
-                    </p>
-                    <a href="project3.html" class="project-link">View Case Study →</a>
+                    <h3 class="project-title">Diary Studies Report</h3>
+                    <p class="project-description">An individual research study utilizing a 7-day diary method from 2- participants to capture the context of user media consumption in the moment. This project utilized quliatative analysis, affinity mapping, and empathy maps to synthesize findings into a digestible format.</p>
+                    <a href="project3.html" class="project-link">View Project→</a>
                 </div>
             </article>
         </div>
@@ -198,7 +216,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Emis Koscielniak. Designed & Developed with care.</p>
+            <p>&copy; 2025 Emis Koscielniak. Designed & developed with care.</p>
         </div>
     </footer>
 

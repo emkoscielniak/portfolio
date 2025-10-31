@@ -20,23 +20,97 @@ navLinks.forEach(link => {
     });
 });
 
-// Smooth Scrolling for Navigation Links
-
+// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        
         if (target) {
-            const offsetTop = target.offsetTop - 70; // Account for fixed navbar
-            
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
             });
         }
     });
 });
+
+// Project Filter Functionality
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+let activeFilters = new Set(['all']);
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const filterValue = button.getAttribute('data-filter');
+        
+        // Handle "All" button click
+        if (filterValue === 'all') {
+            activeFilters.clear();
+            activeFilters.add('all');
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+        } else {
+            // Remove "All" if it's active
+            if (activeFilters.has('all')) {
+                activeFilters.delete('all');
+                document.querySelector('[data-filter="all"]').classList.remove('active');
+            }
+            
+            // Toggle the clicked filter
+            if (activeFilters.has(filterValue)) {
+                activeFilters.delete(filterValue);
+                button.classList.remove('active');
+            } else {
+                activeFilters.add(filterValue);
+                button.classList.add('active');
+            }
+            
+            // If no filters are selected, activate "All"
+            if (activeFilters.size === 0) {
+                activeFilters.add('all');
+                document.querySelector('[data-filter="all"]').classList.add('active');
+            }
+            
+            // Get all available filter values (excluding "all")
+            const allFilterValues = Array.from(filterButtons)
+                .map(btn => btn.getAttribute('data-filter'))
+                .filter(val => val !== 'all');
+            
+            // If all filters are selected, switch to "All"
+            if (activeFilters.size === allFilterValues.length) {
+                activeFilters.clear();
+                activeFilters.add('all');
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                document.querySelector('[data-filter="all"]').classList.add('active');
+            }
+        }
+        
+        // Filter projects
+        filterProjects();
+    });
+});
+
+function filterProjects() {
+    projectCards.forEach(card => {
+        const cardTags = card.getAttribute('data-tags').split(',');
+        
+        // Show all if "all" is active
+        if (activeFilters.has('all')) {
+            card.classList.remove('hidden');
+        } else {
+            // Check if card has ANY of the active filters
+            const hasActiveTag = cardTags.some(tag => activeFilters.has(tag));
+            
+            if (hasActiveTag) {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        }
+    });
+}
+
+// Add active class to navigation links on scroll
 // Navbar Background on Scroll
 
 const navbar = document.querySelector('.navbar');
@@ -72,7 +146,6 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe all project cards for animation
-const projectCards = document.querySelectorAll('.project-card');
 projectCards.forEach(card => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(30px)';

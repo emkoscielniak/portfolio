@@ -104,7 +104,10 @@ a {
     color: var(--text-secondary);
     max-width: 600px;
     margin: 0 auto;
+    margin-bottom: var(--spacing-sm);
 }
+
+/* Utility Classes */
 
 /* Navigation */
 
@@ -316,12 +319,50 @@ a {
     background-color: var(--background);
 }
 
+.project-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    margin-bottom: var(--spacing-xl);
+    padding: 0 var(--spacing-md);
+}
+
+.filter-btn {
+    padding: 0.625rem 1.25rem;
+    background-color: var(--background-alt);
+    color: var(--text-secondary);
+    border: 2px solid var(--border-color);
+    border-radius: 25px;
+    font-size: 0.9375rem;
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: var(--font-primary);
+}
+
+.filter-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
 .project-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-xl);
     margin-bottom: var(--spacing-2xl);
     align-items: center;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-card.hidden {
+    display: none;
 }
 
 .project-card:nth-child(even) {
@@ -339,6 +380,8 @@ a {
     box-shadow: var(--shadow-lg);
     aspect-ratio: 16/10;
     background-color: var(--background-alt);
+    display: block;
+    cursor: pointer;
 }
 
 .project-image img {
@@ -485,7 +528,7 @@ a {
 .skill-category li {
     padding: 0.5rem 0;
     color: var(--text-secondary);
-    font-size: 0.9375rem;
+    font-size: 1rem;
     border-bottom: 1px solid var(--border-color);
 }
 
