@@ -54,7 +54,7 @@ body {
     color: var(--text-primary);
     background-color: var(--background);
     line-height: 1.6;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 /* Typography */
@@ -65,10 +65,10 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-primary);
 }
 
-h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); }
-h2 { font-size: clamp(2rem, 4vw, 2.5rem); }
-h3 { font-size: clamp(1.5rem, 3vw, 1.875rem); }
-h4 { font-size: 1.25rem; }
+h1 { font-size: clamp(2.75rem, 5vw, 3.75rem); }
+h2 { font-size: clamp(2.25rem, 4vw, 2.75rem); }
+h3 { font-size: clamp(1.625rem, 3vw, 2rem); }
+h4 { font-size: 1.375rem; }
 
 p {
     color: var(--text-secondary);
@@ -100,7 +100,7 @@ a {
 }
 
 .section-subtitle {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     color: var(--text-secondary);
     max-width: 600px;
     margin: 0 auto;
@@ -115,11 +115,11 @@ a {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(247, 239, 235, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
-    padding: var(--spacing-sm) 0;
+    padding: var(--spacing-md) 0;
 }
 
 .nav-container {
@@ -132,7 +132,7 @@ a {
 }
 
 .logo {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: var(--font-weight-bold);
     color: var(--text-primary);
 }
@@ -147,7 +147,7 @@ a {
 .nav-link {
     color: var(--text-secondary);
     font-weight: var(--font-weight-medium);
-    font-size: 0.9375rem;
+    font-size: 1.125rem;
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: 6px;
     transition: var(--transition);
