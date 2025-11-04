@@ -345,6 +345,33 @@
     box-shadow: var(--shadow-xl);
 }
 
+/* Wireframes Grid */
+.wireframes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+}
+
+.wireframe-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.wireframe-item img {
+    width: 100%;
+    height: 400px; /* Equal height for all wireframes */
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+}
+
+.wireframe-item .image-caption {
+    margin-top: var(--spacing-sm);
+    text-align: center;
+}
+
 /* Project Navigation */
 .project-navigation {
     display: flex;
