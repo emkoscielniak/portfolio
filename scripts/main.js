@@ -34,77 +34,67 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Project Filter Functionality
-const filterButtons = document.querySelectorAll('.filter-btn');
-const projectCards = document.querySelectorAll('.project-card');
+// Toggleable Filter System
 let activeFilters = new Set(['all']);
 
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const filterValue = button.getAttribute('data-filter');
+function filterProjects(category) {
+    const clickedButton = event.target;
+    
+    if (category === 'all') {
+        // If "All" is clicked, clear other filters and activate "All"
+        activeFilters.clear();
+        activeFilters.add('all');
         
-        // Handle "All" button click
-        if (filterValue === 'all') {
-            activeFilters.clear();
-            activeFilters.add('all');
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-        } else {
-            // Remove "All" if it's active
-            if (activeFilters.has('all')) {
-                activeFilters.delete('all');
-                document.querySelector('[data-filter="all"]').classList.remove('active');
-            }
-            
-            // Toggle the clicked filter
-            if (activeFilters.has(filterValue)) {
-                activeFilters.delete(filterValue);
-                button.classList.remove('active');
-            } else {
-                activeFilters.add(filterValue);
-                button.classList.add('active');
-            }
-            
-            // If no filters are selected, activate "All"
-            if (activeFilters.size === 0) {
-                activeFilters.add('all');
-                document.querySelector('[data-filter="all"]').classList.add('active');
-            }
-            
-            // Get all available filter values (excluding "all")
-            const allFilterValues = Array.from(filterButtons)
-                .map(btn => btn.getAttribute('data-filter'))
-                .filter(val => val !== 'all');
-            
-            // If all filters are selected, switch to "All"
-            if (activeFilters.size === allFilterValues.length) {
-                activeFilters.clear();
-                activeFilters.add('all');
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                document.querySelector('[data-filter="all"]').classList.add('active');
-            }
+        // Update button states
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        clickedButton.classList.add('active');
+        
+    } else {
+        // Remove "All" if it's active
+        if (activeFilters.has('all')) {
+            activeFilters.delete('all');
+            document.querySelector('[onclick="filterProjects(\'all\')"]').classList.remove('active');
         }
         
-        // Filter projects
-        filterProjects();
-    });
-});
-
-function filterProjects() {
-    projectCards.forEach(card => {
-        const cardTags = card.getAttribute('data-tags').split(',');
-        
-        // Show all if "all" is active
-        if (activeFilters.has('all')) {
-            card.classList.remove('hidden');
+        // Toggle the clicked filter
+        if (activeFilters.has(category)) {
+            activeFilters.delete(category);
+            clickedButton.classList.remove('active');
         } else {
-            // Check if card has ANY of the active filters
-            const hasActiveTag = cardTags.some(tag => activeFilters.has(tag));
+            activeFilters.add(category);
+            clickedButton.classList.add('active');
+        }
+        
+        // If no filters are active, default to "All"
+        if (activeFilters.size === 0) {
+            activeFilters.add('all');
+            document.querySelector('[onclick="filterProjects(\'all\')"]').classList.add('active');
+        }
+    }
+    
+    // Apply filtering
+    applyFilters();
+}
+
+function applyFilters() {
+    const projects = document.querySelectorAll('.project-card');
+    
+    projects.forEach(project => {
+        if (activeFilters.has('all')) {
+            // Show all projects
+            project.style.display = 'block';
+        } else {
+            // Check if project matches any active filter
+            const projectMatches = Array.from(activeFilters).some(filter => 
+                project.classList.contains('project-' + filter)
+            );
             
-            if (hasActiveTag) {
-                card.classList.remove('hidden');
+            if (projectMatches) {
+                project.style.display = 'block';
             } else {
-                card.classList.add('hidden');
+                project.style.display = 'none';
             }
         }
     });
@@ -266,3 +256,87 @@ skipLink.addEventListener('blur', () => {
 });
 
 document.body.insertBefore(skipLink, document.body.firstChild);
+
+// Fullscreen Image Viewer
+document.addEventListener('DOMContentLoaded', function() {
+    // Create fullscreen overlay if it doesn't exist
+    if (!document.querySelector('.fullscreen-overlay')) {
+        const overlay = document.createElement('div');
+        overlay.className = 'fullscreen-overlay';
+        overlay.innerHTML = `
+            <div class="fullscreen-close">&times;</div>
+            <img class="fullscreen-image" src="" alt="">
+            <div class="fullscreen-instructions">Click anywhere to close</div>
+        `;
+        document.body.appendChild(overlay);
+    }
+
+    const fullscreenOverlay = document.querySelector('.fullscreen-overlay');
+    const fullscreenImage = document.querySelector('.fullscreen-image');
+    const closeButton = document.querySelector('.fullscreen-close');
+
+    // Function to open fullscreen
+    function openFullscreen(imageSrc, imageAlt) {
+        fullscreenImage.src = imageSrc;
+        fullscreenImage.alt = imageAlt;
+        fullscreenOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+
+    // Function to close fullscreen
+    function closeFullscreen() {
+        fullscreenOverlay.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+        setTimeout(() => {
+            fullscreenImage.src = '';
+        }, 300); // Wait for animation to complete
+    }
+
+    // Add click listeners to all images
+    function addImageClickListeners() {
+        // Target all clickable images
+        const clickableImages = document.querySelectorAll(
+            '.image-polaroid img, .pinned-image, .project-overview-image img, .logo-polaroid img'
+        );
+
+        clickableImages.forEach(img => {
+            img.addEventListener('click', function(e) {
+                e.stopPropagation();
+                openFullscreen(this.src, this.alt);
+            });
+        });
+    }
+
+    // Close fullscreen when clicking overlay or close button
+    fullscreenOverlay.addEventListener('click', closeFullscreen);
+    closeButton.addEventListener('click', closeFullscreen);
+
+    // Close fullscreen with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && fullscreenOverlay.classList.contains('active')) {
+            closeFullscreen();
+        }
+    });
+
+    // Prevent closing when clicking on the image itself
+    fullscreenImage.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+    // Initialize image click listeners
+    addImageClickListeners();
+
+    // Re-initialize when new content is loaded (for dynamic content)
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+                addImageClickListeners();
+            }
+        });
+    });
+
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+});

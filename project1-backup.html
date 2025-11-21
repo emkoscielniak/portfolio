@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventGenie - Emis Koscielniak</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/portfolio-icon.png">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Emis Koscielniak</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#work" class="nav-link">Work</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="resume.pdf" class="nav-link resume-btn" target="_blank">Resume</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Content -->
+    <main class="project-content" style="padding-top: 0;">
+        <div class="container">
+            <a href="index.html#work" class="back-link" style="display: inline-block; margin: 0;">← Back to Projects</a>
+            
+            <!-- EventGenie Logo -->
+            <div class="project-logo">
+                <img src="images/event-genie-logo.png" alt="EventGenie Logo">
+            </div>
+
+            <!-- Overview Section -->
+            <section class="content-section">
+                <h2>Project Overview</h2>
+                
+                <div class="highlight-box">
+                    <h3>The Problem</h3>
+                    <p>Event hosts struggle with using multiple applications (Google Forms, Google Sheets, Partiful) to manage budgeting, collect dietary restrictions, and consider suitable caterers, creating friction and health risks when it comes to event planning.</p>
+                </div>
+
+                <div class="highlight-box success">
+                    <h3>The Solution</h3>
+                    <p>A unified web application that streamlines planning, collects guest data, and provides data analysis for budgeting and dietary accommodations.</p>
+                </div>
+
+                <p>As Project Lead and Lead UX Designer, I guided our team through the iterative design process to create EventGenie—a platform that reduces app fatigue and empowers event hosts to plan with confidence.</p>
+
+                <h3>See EventGenie in Action</h3>
+                <p>Watch how EventGenie addresses real user pain points and helps event hosts achieve their goals:</p>
+                
+                <div class="video-demo-section">
+                    <div class="embed-responsive">
+                        <video controls preload="metadata" poster="images/eventgenie-thumbnail.png">
+                            <source src="videos/eventgenie-story.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p class="embed-caption">Problem scenario, solution demonstration, and user impact</p>
+                </div>
+            </section>
+
+            <!-- Discovery & Research Section -->
+            <section class="content-section">
+                <h2>Discovery & Research</h2>
+                <p>We conducted user interviews, created affinity maps, and culminated a persona and scenarios to deeply understand event hosts' pain points.</p>
+                
+                <h3>Research Methodology</h3>
+                <ul>
+                    <li><strong>User Interviews:</strong> Spoke with event coordinators, and club leaders</li>
+                    <li><strong>Affinity Mapping:</strong> Synthesized interview data into themes and patterns</li>
+                    <li><strong>Persona Creation:</strong> Developed a detailed user profile based on research</li>
+                    <li><strong>Scenario Drafting:</strong> Mapped realistic use cases and problem situations</li>
+                </ul>
+
+                <h3>Key Pain Points Discovered</h3>
+                
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h4>App Fatigue</h4>
+                        <p>Users find the abundance of separate applications needed for event planning frustrating and overwhelming.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Coordination Anxiety</h4>
+                        <p>The hardest part of planning is coordinating restaurants and ensuring specific ingredients aren't contained in menu items.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Data Compilation</h4>
+                        <p>It is time-consuming to compile dietary restrictions from hundreds of guests into a readable format without being prone to error.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Emotional Friction</h4>
+                        <p>A majority of reported feelings regarding event planning were negative, including annoyance with forms and frustration coordinating vendors.</p>
+                    </div>
+                </div>
+
+                <h3>Primary Persona: Francis Dudley</h3>
+                <div class="highlight-box">
+                    <p><strong>Role:</strong> Director of Events</p>
+                    <p><strong>Focus:</strong> Managing client events while accommodating severe allergies and dietary restrictions</p>
+                    <p><strong>Pain Point:</strong> Constantly switching between multiple tools, leading to errors and missed details that could pose health risks</p>
+                </div>
+
+                <div class="project-image-section">
+                    <img src="images/project1-persona.png" alt="Francis Dudley Persona">
+                    <p class="image-caption">Persona: Francis Dudley, Director of Events</p>
+                </div>
+
+                <h3>Empathy Map Insights</h3>
+                <p>Our empathy mapping revealed that users felt <strong>stressed and annoyed</strong> with Google Sheets/Forms, and felt the <strong>heavy responsibility</strong> of others' food service and safety.</p>
+
+                <div class="project-image-section">
+                    <img src="images/project1-empathy-map.png" alt="Empathy Map">
+                    <p class="image-caption">Empathy map showing aggregated feelings and frustrations</p>
+                </div>
+            </section>
+
+            <!-- Design Strategy Section -->
+            <section class="content-section">
+                <h2>Design Strategy</h2>
+                <p>Based on our research insights, we translated user pain points into actionable design goals and features.</p>
+
+                <h3>User Goals</h3>
+                <p>We defined three core goals based on user needs:</p>
+                <ol>
+                    <li><strong>Plan an event within a budget range</strong></li>
+                    <li><strong>Analyze budget and user trends</strong></li>
+                    <li><strong>Connect with local food providers and arrange catering</strong></li>
+                </ol>
+
+                <h3>Problem Scenarios</h3>
+                <p>We developed scenarios to frame the core problem, such as:</p>
+                <div class="highlight-box">
+                    <p><strong>Jessica, Front Desk Attendant:</strong> Spends hours toggling between Google Suite apps to collect dietary restrictions, check budgets in spreadsheets, and search Yelp for caterers while constantly worrying about missing a critical allergy</p>
+                </div>
+
+                <h3>How Might We Statements</h3>
+                <ul>
+                    <li><strong>HMW</strong> design app navigation that is natural and effortless for users of all ages and technical skills?</li>
+                    <li><strong>HMW</strong> allow users to quickly find affordable suppliers for their food?</li>
+                    <li><strong>HMW</strong> allow users to communicate with food suppliers more easily, especially with language barriers present?</li>
+                </ul>
+            </section>
+
+            <!-- Architecture & Prototyping Section -->
+            <section class="content-section" style="margin-top: calc(-1 * var(--spacing-lg));">
+                <h2>Architecture & Prototyping</h2>
+                <p>We transitioned from abstract concepts to testable prototypes through careful information architecture and user flow mapping.</p>
+
+                <h3>Information Architecture</h3>
+                <p>We established a clear core structure for the application:</p>
+                <ul>
+                    <li><strong>Home</strong> → Dashboard with quick access to key features</li>
+                    <li><strong>Explore Restaurants</strong> → Browse and vet catering options</li>
+                    <li><strong>Events</strong> → Manage current and upcoming events</li>
+                    <li><strong>Data Analysis</strong> → Budget tracking and dietary trends</li>
+                    <li><strong>Profile</strong> → User settings and preferences</li>
+                </ul>
+
+                <h3>User Flows</h3>
+                <p>We mapped detailed flows for critical tasks, such as <strong>"Plan an event within a budget range"</strong> which moves through:</p>
+                <ol>
+                    <li>Sign-up / Login</li>
+                    <li>Create new event</li>
+                    <li>Set budget parameters</li>
+                    <li>Review suitable caterers</li>
+                    <li>Contact and arrange catering</li>
+                </ol>
+
+                <div class="project-image-section">
+                    <img src="images/project1-user-flow.jpg" alt="User Flow Diagram">
+                    <p class="image-caption">User flow for planning an event within budget</p>
+                </div>
+
+                <h3>Concept Sketches</h3>
+                <p>We used rough sketches to quickly explore multiple design directions and establish core layouts, including the Home screen layout with Events, Forms, and Restaurants sections.</p>
+
+                <div class="project-image-section">
+                    <img src="images/project1-sketches.jpg" alt="Early Concept Sketches">
+                    <p class="image-caption">Early concept sketches exploring different approaches</p>
+                </div>
+
+                <h3>Paper Prototype</h3>
+                <p>We then refined our concepts into paper prototype screens to test navigation flows and interactions before moving to digital wireframes. These low-fidelity prototypes allowed us to validate our design decisions quickly and cost-effectively.</p>
+                <p>Below are video walkthroughs demonstrating how users would complete each of our three core user goals:</p>
+
+                <div class="video-grid">
+                    <div class="video-item">
+                        <h3>Goal 1: Plan an Event Within Budget</h3>
+                        <div class="embed-responsive">
+                            <video controls preload="metadata" poster="images/user-goal1-thumbnail.png">
+                                <source src="videos/paper-prototype-goal1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <p class="embed-caption">User flow: Creating an event and setting budget parameters</p>
+                    </div>
+
+                    <div class="video-item">
+                        <h3>Goal 2: Analyze Budget and User Trends</h3>
+                        <div class="embed-responsive">
+                            <video controls preload="metadata" poster="images/user-goal2-thumbnail.png">
+                                <source src="videos/paper-prototype-goal2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <p class="embed-caption">User flow: Accessing and reviewing data analysis features</p>
+                    </div>
+
+                    <div class="video-item">
+                        <h3>Goal 3: Connect With Food Providers</h3>
+                        <div class="embed-responsive">
+                            <video controls preload="metadata" poster="images/user-goal3-thumbnail.png">
+                                <source src="videos/paper-prototype-goal3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <p class="embed-caption">User flow: Finding caterers and initiating contact</p>
+                    </div>
+                </div>
+
+                <h3>Medium Fidelity Prototype</h3>
+                <p>After validating the core flows with paper prototypes, we developed a clickable prototype in Figma to test detailed interactions and validate our design decisions.</p>
+
+                <div class="video-demo-section">
+                    <div class="embed-responsive">
+                        <video controls preload="metadata" poster="images/eventgenie-thumbnail.png">
+                            <source src="videos/med-fidelity-prototype-demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p class="embed-caption">Interactive demonstration of the medium fidelity prototype in Figma</p>
+                </div>
+            </section>
+
+            <!-- Usability Testing & Validation Section -->
+            <section class="content-section">
+                <h2>Usability Testing & Validation</h2>
+                <p>We tested the clickable prototype with users to validate our design decisions and identify areas for improvement.</p>
+
+                <h3>Testing Methodology</h3>
+                <p>Participants were given specific tasks to complete:</p>
+                <ul>
+                    <li>Create a new event</li>
+                    <li>Review budget analysis for an event</li>
+                    <li>Get in contact with a restaurant</li>
+                    <li>View dietary restriction distribution data</li>
+                </ul>
+
+                <h3>Key Findings</h3>
+                
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h4>Navigation Success</h4>
+                        <p>The main navigation bar (Home, Restaurants, Events, Data) was found to be intuitive and easy to use.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Icon Confusion</h4>
+                        <p>Participants had trouble finding the "Dietary Restriction Distribution" graph and "guessed where it should be."</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Contact Friction</h4>
+                        <p>The message bubble icon was too small and blended in with the phone icon. Users gravitated toward the rightmost icon (phone).</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>User Preference</h4>
+                        <p>Users showed a preference for chat over phone contact, indicating the need to prioritize the chat feature.</p>
+                    </div>
+                </div>
+
+                <h3>Design Iterations Based on Testing</h3>
+                
+                <div class="highlight-box">
+                    <h4>Recommendation 1: Refine Data Information Architecture</h4>
+                    <p>Add clear subheadings to the "Data" tab to label Budget and User Trends sections, making the dietary restriction distribution easier to find.</p>
+                </div>
+
+                <div class="highlight-box">
+                    <h4>Recommendation 2: Improve Contact UI</h4>
+                    <p>Make the chat bubble larger, move it to the right side (position of preference), and clearly define it as the preferred contact method over phone.</p>
+                </div>
+
+                <div class="project-image-section">
+                    <img src="images/project1-before-after.png" alt="Before and After UI Changes">
+                    <p class="image-caption">Contact UI improvements: Before (left) and After (right)</p>
+                </div>
+            </section>
+
+            <!-- Next Steps & Conclusion Section -->
+            <section class="content-section">
+                <h2>Next Steps & Takeaways</h2>
+                
+                <h3>Final Vision</h3>
+                <p>EventGenie successfully reduces app fatigue and collects data for event hosts, allowing them to optimize their planning workflow and ensure accommodating, safe events for all attendees.</p>
+
+                <div class="highlight-box success">
+                    <h3>Impact</h3>
+                    <ul>
+                        <li>Reduced number of apps needed from 5+ to 1</li>
+                        <li>Centralized dietary data eliminates manual compilation errors</li>
+                        <li>Budget analysis features suggests data-driven catering decisions</li>
+                        <li>Direct restaurant communication reduces coordination anxiety</li>
+                    </ul>
+                </div>
+
+                <h3>Next Phase: High-Fidelity UI</h3>
+                <p>Based on our validation testing, the next steps include:</p>
+                <ul>
+                    <li><strong>Visual Design System:</strong> Develop comprehensive UI incorporating brand identity and accessibility standards</li>
+                    <li><strong>Budget Visualizations:</strong> Implement interactive charts and graphs for budget analysis features</li>
+                    <li><strong>Data Analysis Dashboard:</strong> Create clear subheadings and improved Information Architecture for the dietary restriction distribution feature</li>
+                    <li><strong>Responsive Design:</strong> Ensure mobile and tablet optimization for portable event management</li>
+                </ul>
+
+                <h3>Reflection</h3>
+                <p>Leading this project taught me valuable lessons in:</p>
+                <ul>
+                    <li><strong>Prioritizing Discovery:</strong> Thorough user research allowed for my team and I to deeply understand the problem we are trying to solve prior to focusing on solutions.</li>
+                    <li><strong>Mitigating Bias:</strong>Detailed research helped us in recognizing and addressing personal biases during the design process, a crucial action to ensure our app genuinely solved the hosts' complex planning needs.</li>
+                    <li><strong>Iterative process:</strong>Engaging with the full design process and seeing where artifacts fit into tho the Double Diamond model increased my confidence as a designer due to the success of creating an effective and inclusive design.</li>
+                </ul>
+            </section>
+
+            <!-- Navigation -->
+            <div class="project-navigation">
+                <a href="index.html#work" class="nav-btn">← Back to Projects</a>
+                <a href="project2.html" class="nav-btn">Next Project: Starter's Grid →</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Emis Koscielniak. Designed & Developed with care.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starter's Grid - Emis Koscielniak</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/portfolio-icon.png">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Emis Koscielniak</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#work" class="nav-link">Work</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="documents/emis-koscielniak-resume.pdf" class="nav-link resume-btn" target="_blank">Resume</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Content -->
+    <main class="project-content" style="padding-top: var(--spacing-xl);">
+        <div class="container">
+            <a href="index.html#work" class="back-link" style="display: inline-block; margin-top: var(--spacing-lg); margin-bottom: 0;">← Back to Projects</a>
+            
+            <!-- Starter's Grid Logo -->
+            <div class="project-logo" style="margin-top: var(--spacing-lg); margin-bottom: var(--spacing-lg); margin-left: 0;">
+                <img src="images/Starter's Grid Overview.png" alt="Starter's Grid Logo">
+            </div>
+
+            <!-- Overview Section -->
+            <section class="content-section">
+                <h2>Project Overview</h2>
+                <p>Starter's Grid is a fully responsive educational website designed to introduce beginners to the exciting world of Formula 1 and Formula E racing. This project showcases the complete design and development process, from information architecture to a live, code-based product.</p>
+                <p>The website utilizes mobile-first development principles to organize complex motorsport content into an accessible, engaging learning experience.</p>
+            </section>
+
+            <!-- Problem Section -->
+            <section class="content-section">
+                <h2>The Challenge</h2>
+                <p>Motorsport racing, particularly Formula 1 and Formula E, can be intimidating for newcomers due to complex rules, technical terminology, and extensive history.</p>
+                
+                <div class="highlight-box">
+                    <h3>Design Goals</h3>
+                    <ul>
+                        <li>Make racing accessible to complete beginners</li>
+                        <li>Organize complex information in an intuitive way</li>
+                        <li>Create an engaging, visually appealing experience</li>
+                        <li>Ensure full responsiveness across all devices</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Information Architecture -->
+            <section class="content-section">
+                <h2>Information Architecture</h2>
+                <p>I began by mapping out all the content and organizing it into logical categories that would make sense to beginners. This sitemap shows the complete structure and relationships between pages:</p>
+                
+                <div class="project-image-section">
+                    <img src="images/starters-grid-sitemap.png" alt="Starter's Grid Sitemap">
+                    <p class="image-caption">Sitemap showing content hierarchy and navigation structure</p>
+                </div>
+
+                <div style="text-align: center; margin: var(--spacing-lg) 0;">
+                    <a href="documents/starters-grid-content-inventory.pdf" class="nav-btn" target="_blank" style="display: inline-block;">
+                        View Detailed Content Inventory →
+                    </a>
+                </div>
+
+                <h3>Content Structure</h3>
+                <ul>
+                    <li><strong>Introduction:</strong> What is racing? Why should you care?</li>
+                    <li><strong>F1 Basics:</strong> Rules, teams, and terminology</li>
+                    <li><strong>Formula E:</strong> Electric racing, sustainability, and unique features</li>
+                </ul>
+            </section>
+
+            <!-- Design Process -->
+            <section class="content-section">
+                <h2>Design Process</h2>
+                
+                <h3>Wireframes</h3>
+                <p>I created comprehensive wireframes in Figma, focusing on clear information hierarchy and intuitive navigation patterns. Each wireframe represents a key page in the site structure:</p>
+                
+                <div class="wireframes-grid">
+                    <div class="wireframe-item">
+                        <img src="images/wireframe-1.png" alt="Homepage Wireframe">
+                        <p class="image-caption">Homepage wireframe</p>
+                    </div>
+                    <div class="wireframe-item">
+                        <img src="images/wireframe-2.png" alt="About Wireframe">
+                        <p class="image-caption">About page</p>
+                    </div>
+                    <div class="wireframe-item">
+                        <img src="images/wireframe-3.png" alt="Formula 1 Circuits Wireframe">
+                        <p class="image-caption">Formula 1 Circuits page</p>
+                    </div>
+                    <div class="wireframe-item">
+                        <img src="images/wireframe-4.png" alt="Formula E Circuits Wireframe">
+                        <p class="image-caption">Formula E Circuits page</p>
+                    </div>
+                    <div class="wireframe-item">
+                        <img src="images/wireframe-5.png" alt="Formula 1 Wireframe">
+                        <p class="image-caption">Formula 1 page</p>
+                    </div>
+                    <div class="wireframe-item">
+                        <img src="images/wireframe-6.png" alt="Contact Wireframe">
+                        <p class="image-caption">Contact page</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Development Section -->
+            <section class="content-section">
+                <h2>Development</h2>
+                <p>Taking a mobile-first approach, I built the website using semantic HTML5, CSS3 with flexbox and grid, and Bootstrap for responsive design.</p>
+
+                <h3>Technical Highlights</h3>
+                <ul>
+                    <li><strong>Bootstrap Framework:</strong> Leveraged Bootstrap's responsive grid system and components for efficient development</li>
+                    <li><strong>Responsive Navigation:</strong> Mobile-first navbar with collapsible menu and dropdown functionality</li>
+                    <li><strong>Performance:</strong> Optimized images and minimal custom JavaScript for fast loading</li>
+                    <li><strong>Accessibility:</strong> Semantic HTML, ARIA labels, and keyboard navigation</li>
+                    <li><strong>Version Control:</strong> Git workflow with GitHub for code management</li>
+                </ul>
+
+                <h3>Responsive Design in Action</h3>
+                <p>The site adapts seamlessly across all device sizes, from mobile phones to desktop monitors. Here's how the design responds to different screen sizes:</p>
+                
+                <div class="project-image-section">
+                    <img src="images/starters-grid-responsive-1.png" alt="Responsive Design Mockups">
+                    <p class="image-caption">Website displayed across mobile, tablet, and desktop devices</p>
+                </div>
+
+                <div class="project-image-section">
+                    <img src="images/project2-code.png" alt="Code Example">
+                    <p class="image-caption">Bootstrap responsive navigation with collapsible menu and dropdown functionality</p>
+                </div>
+                
+                <div class="project-image-section">
+                    <img src="images/project2-code-css.png" alt="CSS Snippet Screenshot" style="width:50%; max-width:640px; display:block; margin-left:auto; margin-right:auto;">
+                    <p class="image-caption">CSS snippet showing navbar brand, link sizing and toggler styling</p>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="content-section">
+                <h2>Key Features</h2>
+                
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h4>Progressive Disclosure</h4>
+                        <p>Information revealed incrementally to avoid information overload for beginners</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Visual Learning</h4>
+                        <p>Diagrams and images supplementing text</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Interactive Elements</h4>
+                        <p>Hover effects and animations enhance engagement</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Mobile-First</h4>
+                        <p>Optimized for mobile learning on any device</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Outcomes Section -->
+            <section class="content-section">
+                <h2>Outcomes & Learnings</h2>
+                <p>This project strengthened my skills in both design and development, demonstrating the ability to take a project from concept to a live product.</p>
+
+                <div class="highlight-box success">
+                    <h3>Key Achievements</h3>
+                    <ul>
+                        <li>Deployed live website accessible to real users</li>
+                        <li>Positive feedback from users with no prior racing knowledge</li>
+                        <li>Seamless experience across all device sizes</li>
+                    </ul>
+                </div>
+
+                <h3>What I Learned</h3>
+                <ul>
+                    <li><strong>Content strategy:</strong> Organizing complex information for various audiences</li>
+                    <li><strong>Responsive development:</strong> Building fluid layouts that work on any device</li>
+                    <li><strong>Performance optimization:</strong> Balancing visual richness with load times</li>
+                    <li><strong>End-to-end ownership:</strong> Managing all aspects of a project independently</li>
+                </ul>
+
+                <h3>Future Enhancements</h3>
+                <ul>
+                    <li>Add interactive quizzes to test understanding</li>
+                    <li>Create a glossary of racing terminology</li>
+                    <li>Add a live leaderboard for ongoing races during the season</li>
+                </ul>
+            </section>
+
+            <!-- Navigation -->
+            <div class="project-navigation">
+                <a href="project1.html" class="nav-btn">← Previous: EventGenie</a>
+                <a href="project3.html" class="nav-btn">Next Project: Diary Studies →</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Emis Koscielniak. Designed & Developed with care.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
