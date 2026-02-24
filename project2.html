@@ -9,17 +9,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shobhika:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="project-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">Emis Koscielniak</a>
+            <a href="index.html" class="logo-center">
+                <img src="images/logo-center.png" alt="EK Logo">
+            </a>
             <ul class="nav-menu">
-                <li><a href="index.html#work" class="nav-link">Work</a></li>
-                <li><a href="index.html#about" class="nav-link">About</a></li>
-                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-                <li><a href="documents/emis-koscielniak-resume.pdf" class="nav-link resume-btn" target="_blank">Resume</a></li>
+                <li><a href="index.html#work" class="nav-link">My Work</a></li>
+                <li><a href="documents/resume.pdf" class="nav-link" target="_blank">Resume</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -32,43 +34,35 @@
     <!-- Project Header -->
     <header class="project-header">
         <div class="container">
-            <div class="back-btn-container">
-                <a href="index.html#work" class="back-btn">
-                    <div class="sticky-note yellow-note">← Back to Projects</div>
-                </a>
-            </div>
+            <a href="index.html#work" class="project-back-link">← Back to Projects</a>
 
             <div class="project-title-section">
-                <h1 class="project-main-title tape-strip">Starter's Grid</h1>
-                <p style="text-align: center; color: var(--text-secondary); font-size: 1.1rem; margin-top: var(--spacing-sm);">Responsive Educational Website for Formula Racing Beginners</p>
+                <h1 class="project-page-title">Starter's Grid</h1>
+                <p class="project-subtitle">Responsive Educational Website for Formula Racing Beginners</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: var(--spacing-lg); margin: var(--spacing-lg) 0; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto;">
-                <div style="text-align: center; padding: var(--spacing-sm);">
-                    <span style="display: block; font-weight: 600; color: var(--text-primary); margin-bottom: var(--spacing-xs);">Role</span>
-                    <span style="color: var(--text-secondary);">UX Designer & Developer</span>
+            <div class="project-meta-grid">
+                <div class="meta-item">
+                    <span class="meta-label">Role</span>
+                    <span class="meta-value">UX Designer & Developer</span>
                 </div>
-                <div style="text-align: center; padding: var(--spacing-sm);">
-                    <span style="display: block; font-weight: 600; color: var(--text-primary); margin-bottom: var(--spacing-xs);">Timeline</span>
-                    <span style="color: var(--text-secondary);">12 Weeks</span>
+                <div class="meta-item">
+                    <span class="meta-label">Timeline</span>
+                    <span class="meta-value">12 Weeks</span>
                 </div>
-                <div style="text-align: center; padding: var(--spacing-sm);">
-                    <span style="display: block; font-weight: 600; color: var(--text-primary); margin-bottom: var(--spacing-xs);">Tools</span>
-                    <span style="color: var(--text-secondary);">Figma, HTML/CSS, GitHub</span>
+                <div class="meta-item">
+                    <span class="meta-label">Tools</span>
+                    <span class="meta-value">Figma, HTML/CSS, GitHub</span>
                 </div>
             </div>
 
-            <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-sm); justify-content: center; margin: var(--spacing-lg) 0;">
-                <span class="sticky-note green-note" style="font-size: 0.8rem; padding: var(--spacing-xs) var(--spacing-sm);">Information Architecture</span>
-                <span class="sticky-note blue-note" style="font-size: 0.8rem; padding: var(--spacing-xs) var(--spacing-sm);">UX Design</span>
-                <span class="sticky-note yellow-note" style="font-size: 0.8rem; padding: var(--spacing-xs) var(--spacing-sm);">Front-End Development</span>
-                <span class="sticky-note pink-note" style="font-size: 0.8rem; padding: var(--spacing-xs) var(--spacing-sm);">Responsive Design</span>
-                <span class="sticky-note blue-note" style="font-size: 0.8rem; padding: var(--spacing-xs) var(--spacing-sm);">HTML/CSS</span>
-                <span class="sticky-note green-note" style="font-size: 0.8rem; padding: var(--spacing-xs) var(--spacing-sm);">Prototyping</span>
-            </div>
-
-            <div class="project-overview-image">
-                <img src="images/Starter's Grid Overview.png" alt="Starter's Grid Overview" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+            <div class="project-tags">
+                <span class="project-tag">Information Architecture</span>
+                <span class="project-tag">UX Design</span>
+                <span class="project-tag">Front-End Development</span>
+                <span class="project-tag">Responsive Design</span>
+                <span class="project-tag">HTML/CSS</span>
+                <span class="project-tag">Prototyping</span>
             </div>
         </div>
     </header>
@@ -77,29 +71,29 @@
     <main class="project-main">
         <div class="container">
             <section class="project-overview">
-                <div class="content-card">
-                    <h2 class="card-title tape-strip">Project Overview</h2>
-                    <div class="card-content">
-                        <p>Starter's Grid is a fully responsive educational website designed to introduce beginners to the exciting world of Formula 1 and Formula E racing. This project showcases the complete design and development process, from information architecture to a live, code-based product.</p>
+                <div class="project-section-clean">
+                    <div class="image-container-centered">
+                        <img src="images/starters-grid-overview.png" alt="Starter's Grid Overview" class="project-logo">
+                    </div>
+                    
+                    <h2 class="section-title">Project Overview</h2>
+                    
+                    <p>Starter's Grid is a fully responsive educational website designed to introduce beginners to the exciting world of Formula 1 and Formula E racing. This project showcases the complete design and development process, from information architecture to a live, code-based product.</p>
                         
                         <p>The website utilizes mobile-first development principles to organize complex motorsport content into an accessible, engaging learning experience.</p>
                         
-                        <div style="text-align: center; margin: var(--spacing-lg) 0;">
-                            <a href="https://emkoscielniak.github.io/P4/" target="_blank" style="text-decoration: none;">
-                                <div class="sticky-note green-note" style="display: inline-block; font-size: 1.1rem; padding: var(--spacing-md) var(--spacing-lg);">
-                                    🏁 Visit Live Website →
-                                </div>
+                        <div style="text-align: center; margin: var(--spacing-md) 0;">
+                            <a href="https://emkoscielniak.github.io/P4/" target="_blank" class="project-nav-btn">
+                                🏁 Visit Live Website →
                             </a>
                         </div>
-                    </div>
                 </div>
             </section>
 
             <!-- The Challenge -->
             <section class="project-process">
-                <div class="content-card">
-                    <h2 class="card-title tape-strip">The Challenge</h2>
-                    <div class="card-content">
+                <div class="project-section-clean">
+                    <h2 class="section-title">The Challenge</h2>
                         <p>Motorsport racing, particularly Formula 1 and Formula E, can be intimidating for newcomers due to complex rules, technical terminology, and extensive history.</p>
                         
                         <p><strong>Design Goals:</strong></p>
@@ -107,15 +101,13 @@
                         <p>• Organize complex information in an intuitive way</p>
                         <p>• Create an engaging, visually appealing experience</p>
                         <p>• Ensure full responsiveness across all devices</p>
-                    </div>
                 </div>
             </section>
 
             <!-- Information Architecture -->
             <section class="project-process">
-                <div class="content-card">
-                    <h2 class="card-title tape-strip">Information Architecture</h2>
-                    <div class="card-content">
+                <div class="project-section-clean">
+                    <h2 class="section-title">Information Architecture</h2>
                         <p>I began by mapping out all the content and organizing it into logical categories that would make sense to beginners. This sitemap shows the complete structure and relationships between pages:</p>
                         
                         <div style="text-align: center; margin: var(--spacing-lg) 0;">
@@ -135,14 +127,13 @@
                                 </div>
                             </a>
                         </div>
-                    </div>
                 </div>
             </section>
 
             <!-- Design Process -->
-            <section class="project-images">
-                <div class="container">
-                    <h2 class="section-title green-bg">Design Process</h2>
+            <section class="project-process">
+                <div class="project-section-clean">
+                    <h2 class="section-title">Design Process</h2>
                     
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: var(--spacing-xl); margin-top: var(--spacing-lg); max-width: 1200px; margin-left: auto; margin-right: auto;">
                         <div style="text-align: center;">
@@ -175,9 +166,8 @@
 
             <!-- Development -->
             <section class="project-process">
-                <div class="content-card">
-                    <h2 class="card-title tape-strip">Development</h2>
-                    <div class="card-content">
+                <div class="project-section-clean">
+                    <h2 class="section-title">Development</h2>
                         <p>Taking a mobile-first approach, I built the website using semantic HTML5, CSS3 with flexbox and grid, and Bootstrap for responsive design.</p>
                         
                         <p><strong>Technical Highlights:</strong></p>
@@ -186,7 +176,6 @@
                         <p>• <strong>Performance:</strong> Optimized images and minimal custom JavaScript for fast loading</p>
                         <p>• <strong>Accessibility:</strong> Semantic HTML, ARIA labels, and keyboard navigation</p>
                         <p>• <strong>Version Control:</strong> Git workflow with GitHub for code management</p>
-                    </div>
                 </div>
             </section>
 
@@ -216,11 +205,9 @@
 
             <!-- Key Features -->
             <section class="key-findings">
-                <div class="content-card">
-                    <h2 class="card-title tape-strip">Key Features</h2>
-                    <div class="card-content">
+                <div class="project-section-clean">
+                    <h2 class="section-title">Key Features</h2>
                         <p>The final solution includes several key features that make motorsport learning accessible:</p>
-                    </div>
                 </div>
 
                 <div class="findings-grid">
@@ -244,9 +231,8 @@
 
             <!-- Outcomes & Learnings -->
             <section class="project-results">
-                <div class="results-card content-card">
-                    <h2 class="card-title tape-strip">Outcomes & Learnings</h2>
-                    <div class="card-content">
+                <div class="project-section-clean">
+                    <h2 class="section-title">Outcomes & Learnings</h2>
                         <p>This project strengthened my skills in both design and development, demonstrating the ability to take a project from concept to a live product.</p>
                         
                         <p><strong>Key Achievements:</strong></p>
@@ -271,19 +257,15 @@
                         <p>• Add a live leaderboard for ongoing races during the season</p>
                         
                         <p>This project showcases the complete product development lifecycle from initial concept through final implementation, highlighting both design thinking and technical execution capabilities.</p>
-                    </div>
                 </div>
             </section>
 
             <!-- Project Navigation -->
             <section class="project-navigation">
                 <div class="nav-buttons">
-                    <a href="project1.html" class="nav-btn">
-                        <div class="sticky-note blue-note">← Previous: EventGenie</div>
-                    </a>
-                    <a href="project3.html" class="nav-btn">
-                        <div class="sticky-note green-note">Next: Diary Studies →</div>
-                    </a>
+                    <a href="project1.html" class="project-nav-btn">← Previous: EventGenie</a>
+                    <a href="index.html#work" class="project-nav-btn project-nav-home">All Projects</a>
+                    <a href="project3.html" class="project-nav-btn">Next: Diary Studies →</a>
                 </div>
             </section>
         </div>
@@ -292,7 +274,30 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Emis Koscielniak. Designed & Developed with care.</p>
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3 class="footer-name">Emis Koscielniak</h3>
+                    <nav class="footer-nav">
+                        <a href="index.html" class="footer-nav-link">HOME</a>
+                        <span class="footer-nav-separator">|</span>
+                        <a href="index.html#work" class="footer-nav-link">WORK</a>
+                        <span class="footer-nav-separator">|</span>
+                        <a href="documents/resume.pdf" class="footer-nav-link" target="_blank">RESUME</a>
+                    </nav>
+                </div>
+                <div class="footer-right">
+                    <a href="mailto:emiskoscielniak@gmail.com" class="footer-email">emiskoscielniak@gmail.com</a>
+                    <p class="footer-copyright">&copy; 2025 Emis Koscielniak</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/emily-k-20a949236" class="footer-social-link" target="_blank">
+                            <img src="images/linkedin.jpg" alt="LinkedIn" class="footer-icon">
+                        </a>
+                        <a href="https://github.com/emkoscielniak" class="footer-social-link" target="_blank">
+                            <img src="images/github.svg" alt="GitHub" class="footer-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 

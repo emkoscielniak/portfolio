@@ -9,17 +9,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shobhika:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">Emis Koscielniak</a>
+            <a href="#home" class="logo-center">
+                <img src="images/logo-center.png" alt="EK Logo">
+            </a>
             <ul class="nav-menu">
-                <li><a href="#work" class="nav-link">Work</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="documents/resume.pdf" class="nav-link resume-btn" target="_blank">Resume</a></li>
+                <li><a href="#work" class="nav-link">My Work</a></li>
+                <li><a href="documents/resume.pdf" class="nav-link" target="_blank">Resume</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -39,13 +41,9 @@
                     </div>
                 </div>
                 <div class="hero-text">
-                    <h1 class="hero-title">Hi! I'm Emis Koscielniak.</h1>
+                    <h1 class="hero-title">Hello, I'm Emis Koscielniak</h1>
                     <p class="hero-description">I'm a third-year Human-Computer Interaction major and Data Analytics minor, currently on the BS/MS track in Information Systems at NJIT.</p>
-                    <p class="hero-description">I am passionate about user-centered design, accessibility, and creating intuitive interfaces that solve real problems.</p>
-                    <div class="hero-buttons">
-                        <a href="#work" class="btn btn-yellow">View My Work</a>
-                        <a href="#contact" class="btn btn-yellow">Get In Touch</a>
-                    </div>
+                    <p class="hero-description">I am passionate about translating designs into intuitive interfaces that solve user problems.</p>
                 </div>
             </div>
         </div>
@@ -53,47 +51,8 @@
 
     <!-- My Toolkit Section -->
     <section id="about" class="toolkit-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title yellow-bg">My Toolkit</h2>
-                <p class="section-subtitle">I execute the design process through iteration and a structured data-driven approach to optimize product performance and maximize user success. Here are the tools I use to make my visions a reality:</p>
-            </div>
-            <div class="toolkit-grid">
-                <div class="toolkit-column">
-                    <h3>UX Research & Methods</h3>
-                    <ul>
-                        <li>User Research</li>
-                        <li>Information Architecture</li>
-                        <li>Wireframing & User Mapping</li>
-                        <li>Usability Testing</li>
-                        <li>Interaction & Visual Design</li>
-                        <li>Design Systems</li>
-                        <li>UX Writing</li>
-                    </ul>
-                </div>
-                <div class="toolkit-column">
-                    <h3>Design & Prototyping Tools</h3>
-                    <ul>
-                        <li>Figma</li>
-                        <li>Adobe XD</li>
-                        <li>Adobe Illustrator</li>
-                        <li>Notion</li>
-                        <li>GlooMaps</li>
-                        <li>Framer</li>
-                    </ul>
-                </div>
-                <div class="toolkit-column">
-                    <h3>Development & Systems</h3>
-                    <ul>
-                        <li>HTML/CSS</li>
-                        <li>JavaScript</li>
-                        <li>Python</li>
-                        <li>Git/GitHub</li>
-                        <li>Terminal/CLI</li>
-                        <li>Accessibility (WCAG)</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="toolkit-svg-container">
+            <img src="images/toolkit.svg" alt="My Toolkit - Skills and Tools" class="toolkit-illustration">
         </div>
     </section>
 
@@ -101,7 +60,7 @@
     <section id="work" class="projects-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title yellow-bg">Featured Projects</h2>
+                <h2 class="section-title">Featured Projects</h2>
                 <p class="section-subtitle">See What I've Been Working On</p>
             </div>
             
@@ -115,105 +74,80 @@
                 <button class="filter-btn" onclick="filterProjects('development')">Front-End Development</button>
                 <button class="filter-btn" onclick="filterProjects('architecture')">Information Architecture</button>
                 <button class="filter-btn" onclick="filterProjects('analysis')">Qualitative Analysis</button>
+                <button class="filter-btn" onclick="filterProjects('quantitative')">Quantitative Analysis</button>
             </div>
 
-            <!-- Projects Grid -->
+            <!-- Project Folders Grid -->
             <div class="projects-grid">
                 <!-- Project 1: EventGenie -->
-                <a href="project1.html" class="project-card-link">
-                    <article class="project-card project-research project-design project-figma project-prototyping">
-                        <div class="project-image">
-                            <div class="image-placeholder">
-                                <img src="images/event-genie-logo.png" alt="EventGenie Project">
+                <a href="project1.html" class="project-folder project-research project-design project-figma project-prototyping">
+                    <div class="folder-tab">
+                        <div class="folder-tab-content">
+                            <h3 class="folder-title">EventGenie</h3>
+                            <div class="folder-tags">
+                                <span class="folder-tag">UX Design</span>
+                                <span class="folder-tag">UX Research</span>
+                                <span class="folder-tag">Figma</span>
+                                <span class="folder-tag">Prototyping</span>
                             </div>
                         </div>
-                        <div class="project-content">
-                            <h3 class="project-title">EventGenie</h3>
-                            <div class="project-tags">
-                                <span class="tag">UX Design</span>
-                                <span class="tag">UX Research</span>
-                                <span class="tag">Figma</span>
-                                <span class="tag">Leadership</span>
-                                <span class="tag">Data Synthesis</span>
-                                <span class="tag">Prototyping</span>
-                            </div>
-                            <p class="project-description">
-                                Led a team in designing EventGenie, a web application to simplify hosts' catering experience through effective management of attendee's dietary restrictions. This project focused on user research, journey mapping, and an iterative design process that resulted in usability testing of a medium fidelity prototype.
-                            </p>
-                            <span class="project-link">View Project</span>
-                        </div>
-                    </article>
+                    </div>
                 </a>
 
                 <!-- Project 2: Starter's Grid -->
-                <a href="project2.html" class="project-card-link">
-                    <article class="project-card project-design project-development project-architecture project-figma project-prototyping">
-                        <div class="project-image">
-                            <div class="image-placeholder">
-                                <img src="images/project2-thumbnail.png" alt="Starter's Grid Project">
+                <a href="project2.html" class="project-folder project-design project-development project-architecture project-figma project-prototyping">
+                    <div class="folder-tab">
+                        <div class="folder-tab-content">
+                            <h3 class="folder-title">Starter's Grid</h3>
+                            <div class="folder-tags">
+                                <span class="folder-tag">Information Architecture</span>
+                                <span class="folder-tag">Front-End Development</span>
+                                <span class="folder-tag">Figma</span>
                             </div>
                         </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Starter's Grid</h3>
-                            <div class="project-tags">
-                                <span class="tag">Information Architecture</span>
-                                <span class="tag">Front-End Development</span>
-                                <span class="tag">Prototyping</span>
-                                <span class="tag">Figma</span>
-                                <span class="tag">GitHub</span>
-                                <span class="tag">HTML/CSS</span>
-                            </div>
-                            <p class="project-description">
-                                Designed and developed a fully responsive educational website that introduces beginners to Formula 1 and Formula E. The project utilizes Information Architecture and mobile-first development to organize complex content, resulting in a functional, code-based live product.
-                            </p>
-                            <span class="project-link">View Project</span>
-                        </div>
-                    </article>
+                    </div>
                 </a>
 
                 <!-- Project 3: Diary Studies Report -->
-                <a href="project3.html" class="project-card-link">
-                    <article class="project-card project-research project-analysis">
-                        <div class="project-image">
-                            <div class="image-placeholder">
-                                <img src="images/project3-thumbnail.png" alt="Diary Studies Report Project">
+                <a href="project3.html" class="project-folder project-research project-analysis">
+                    <div class="folder-tab">
+                        <div class="folder-tab-content">
+                            <h3 class="folder-title">Diary Studies Report</h3>
+                            <div class="folder-tags">
+                                <span class="folder-tag">UX Research</span>
+                                <span class="folder-tag">Qualitative Analysis</span>
+                                <span class="folder-tag">Thematic Analysis</span>
                             </div>
                         </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Diary Studies Report</h3>
-                            <div class="project-tags">
-                                <span class="tag">UX Research</span>
-                                <span class="tag">Qualitative Analysis</span>
-                                <span class="tag">Thematic Analysis</span>
-                                <span class="tag">Affinity Mapping</span>
-                                <span class="tag">Empathy Map</span>
-                            </div>
-                            <p class="project-description">
-                                An individual research study utilizing a 7-day diary method from 20 participants to capture the context of user media consumption in the moment. This project utilized qualitative analysis, affinity mapping, and empathy maps to synthesize findings into a digestible format.
-                            </p>
-                            <span class="project-link">View Project</span>
-                        </div>
-                    </article>
+                    </div>
                 </a>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title green-bg">Let's Connect!</h2>
-            </div>
-            <div class="contact-buttons">
-                <a href="mailto:emiskoscielniak@gmail.com" class="contact-btn yellow-btn">
-                    Email
+                <!-- Project 4: Hack Van Houten -->
+                <a href="project4.html" class="project-folder project-research project-design project-architecture project-analysis project-quantitative">
+                    <div class="folder-tab">
+                        <div class="folder-tab-content">
+                            <h3 class="folder-title">Hack Van Houten</h3>
+                            <div class="folder-tags">
+                                <span class="folder-tag">UX Research</span>
+                                <span class="folder-tag">UX Design</span>
+                                <span class="folder-tag">Information Architecture</span>
+                            </div>
+                        </div>
+                    </div>
                 </a>
-                <a href="https://www.linkedin.com/in/emily-k-20a949236" class="contact-btn yellow-btn" target="_blank">
-                    LinkedIn
-                </a>
-                <a href="https://github.com/emkoscielniak" class="contact-btn yellow-btn" target="_blank">
-                    GitHub
+
+                <!-- Project 5: Final Project: Laptop Stickers as Self-Expression -->
+                <a href="project5.html" class="project-folder project-research project-design project-analysis">
+                    <div class="folder-tab">
+                        <div class="folder-tab-content">
+                            <h3 class="folder-title">Final Project: Laptop Stickers as Self-Expression</h3>
+                            <div class="folder-tags">
+                                <span class="folder-tag">UX Research</span>
+                                <span class="folder-tag">UX Design</span>
+                                <span class="folder-tag">Qualitative Analysis</span>
+                            </div>
+                        </div>
+                    </div>
                 </a>
             </div>
         </div>
@@ -222,19 +156,42 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Emis Koscielniak. Designed & developed with care.</p>
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3 class="footer-name">Emis Koscielniak</h3>
+                    <nav class="footer-nav">
+                        <a href="index.html" class="footer-nav-link">HOME</a>
+                        <span class="footer-nav-separator">|</span>
+                        <a href="index.html#work" class="footer-nav-link">WORK</a>
+                        <span class="footer-nav-separator">|</span>
+                        <a href="documents/resume.pdf" class="footer-nav-link" target="_blank">RESUME</a>
+                    </nav>
+                </div>
+                <div class="footer-right">
+                    <a href="mailto:emiskoscielniak@gmail.com" class="footer-email">emiskoscielniak@gmail.com</a>
+                    <p class="footer-copyright">&copy; 2025 Emis Koscielniak</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/emily-k-20a949236" class="footer-social-link" target="_blank">
+                            <img src="images/linkedin.jpg" alt="LinkedIn" class="footer-icon">
+                        </a>
+                        <a href="https://github.com/emkoscielniak" class="footer-social-link" target="_blank">
+                            <img src="images/github.svg" alt="GitHub" class="footer-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
     <script>
-        // Simple inline filter system
+        // Filter system
         let activeFilters = ['all'];
         
         function filterProjects(category) {
             console.log('Filter clicked:', category);
             
             const clickedButton = event.target;
-            const allCategories = ['research', 'design', 'figma', 'prototyping', 'development', 'architecture', 'analysis'];
+            const allCategories = ['research', 'design', 'figma', 'prototyping', 'development', 'architecture', 'analysis', 'quantitative'];
             
             if (category === 'all') {
                 // Reset to show all
@@ -275,24 +232,39 @@
             
             console.log('Active filters:', activeFilters);
             
-            // Apply filters
-            const projects = document.querySelectorAll('.project-card');
-            projects.forEach(project => {
+            // Apply filters to folders
+            const folders = document.querySelectorAll('.project-folder');
+            folders.forEach(folder => {
                 let shouldShow = false;
                 
                 if (activeFilters.includes('all')) {
                     shouldShow = true;
                 } else {
-                    // Check if project has any active filter class
+                    // Check if folder has any active filter class
                     shouldShow = activeFilters.some(filter => 
-                        project.classList.contains('project-' + filter)
+                        folder.classList.contains('project-' + filter)
                     );
                 }
                 
-                project.style.display = shouldShow ? 'block' : 'none';
-                console.log('Project classes:', project.className, 'Show:', shouldShow);
+                folder.style.display = shouldShow ? 'block' : 'none';
+                
+                console.log('Folder classes:', folder.className, 'Show:', shouldShow);
             });
         }
+
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
     </script>
 </body>
 </html>
