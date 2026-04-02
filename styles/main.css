@@ -605,6 +605,10 @@ body {
     text-align: center;
 }
 
+.toolkit-svg-container picture {
+    display: block;
+}
+
 .toolkit-illustration {
     width: 100%;
     max-width: 100%;
@@ -946,18 +950,34 @@ body {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
-    max-width: 900px;
-    margin: 0 auto;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--spacing-md);
+    max-width: none;
+    width: 100%;
+    margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 900px) {
     .projects-grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
-        max-width: 500px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--spacing-md);
     }
+}
+
+@media (max-width: 640px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.projects-section .container {
+    max-width: 1400px;
 }
 
 /* Project Folder Styling */
@@ -968,8 +988,8 @@ body {
     aspect-ratio: 1 / 1;
     display: flex;
     flex-direction: column;
-    max-width: 220px;
-    margin: 0 auto;
+    max-width: none;
+    width: 100%;
     text-decoration: none;
     color: inherit;
 }
@@ -983,7 +1003,7 @@ body {
 .folder-tab {
     background: linear-gradient(135deg, #E84393 0%, #D42B7D 100%);
     border-radius: 8px;
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: 0.65rem 0.9rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     position: relative;
     z-index: 2;
@@ -994,6 +1014,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 150px;
 }
 
 /* Different colors for each folder */
@@ -1014,7 +1035,11 @@ body {
 }
 
 .project-folder:nth-child(5) .folder-tab {
-    background: linear-gradient(135deg, #2d304d 0%, #23253a 100%);
+    background: linear-gradient(135deg, #efe7dc 0%, #ddcbb4 100%);
+}
+
+.project-folder:nth-child(6) .folder-tab {
+    background: linear-gradient(135deg, #a9c5b1 0%, #dce8df 100%);
 }
 
 .folder-tab:hover {
@@ -1041,47 +1066,26 @@ body {
 .folder-tab-content {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xs);
     width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .folder-title {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: var(--font-weight-bold);
     color: var(--white);
     margin: 0;
     font-family: var(--font-primary);
+    text-align: center;
 }
 
 /* Darker text for lighter folders */
 .project-folder:nth-child(2) .folder-title,
-.project-folder:nth-child(3) .folder-title {
+.project-folder:nth-child(3) .folder-title,
+.project-folder:nth-child(5) .folder-title,
+.project-folder:nth-child(6) .folder-title {
     color: var(--dark-navy);
-}
-
-.folder-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-xs);
-}
-
-.folder-tag {
-    background-color: rgba(255, 255, 255, 0.25);
-    padding: 3px 10px;
-    border-radius: 12px;
-    font-size: 0.85rem;
-    color: var(--white);
-    font-weight: var(--font-weight-medium);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(4px);
-}
-
-/* Darker text and different styling for lighter folders */
-.project-folder:nth-child(2) .folder-tag,
-.project-folder:nth-child(3) .folder-tag {
-    color: var(--dark-navy);
-    background-color: rgba(45, 48, 77, 0.15);
-    border: 1px solid rgba(45, 48, 77, 0.2);
 }
 
 /* Mobile Responsiveness */
@@ -1091,7 +1095,7 @@ body {
     }
     
     .folder-tab {
-        padding: var(--spacing-sm) var(--spacing-md);
+        padding: 0.6rem 0.85rem;
     }
     
     .folder-tab::before {
@@ -1100,12 +1104,7 @@ body {
     }
     
     .folder-title {
-        font-size: 1.1rem;
-    }
-    
-    .folder-tag {
-        font-size: 0.7rem;
-        padding: 2px 8px;
+        font-size: 0.95rem;
     }
 }
 
@@ -1457,6 +1456,24 @@ body {
         );
     background-size: 25px 25px, 40px 40px, 200px 200px;
     background-position: 0 0, 12px 12px, 0 0;
+}
+
+.design-jam-page {
+    background-color: #F9F7F4;
+    background-image: 
+        radial-gradient(circle, #E5E0D8 0.5px, transparent 0.5px),
+        radial-gradient(circle, #DDD8CE 0.8px, transparent 0.8px),
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 100px,
+            rgba(220, 215, 205, 0.08) 100px,
+            rgba(220, 215, 205, 0.08) 101px
+        );
+}
+
+.design-jam-page .project-tag {
+    background-color: var(--sage-green);
 }
 
 .project-header {
@@ -2301,6 +2318,51 @@ body {
     background-color: var(--navy-blue);
 }
 
+.prototype-snapshot-card {
+    text-align: left;
+}
+
+.prototype-snapshot-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--spacing-md);
+    max-width: none;
+    width: 100%;
+}
+
+.prototype-snapshot-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.prototype-snapshot-card p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 1100px) {
+    .prototype-snapshot-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .prototype-snapshot-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-process .project-section-clean .prototype-snapshot-grid {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Project Content Utility Classes */
 .video-container {
     text-align: center;
@@ -2424,6 +2486,10 @@ body {
 
 .project-section-clean li {
     margin-bottom: var(--spacing-xs);
+}
+
+.prototype-gallery-section {
+    max-width: 1200px;
 }
 
 /* Project Details Meta */
